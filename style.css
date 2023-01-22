@@ -1,0 +1,235 @@
+
+:root {
+    --nord0: #f7f7f8;
+    --nord1: #e4e9f1;
+    --nord3: #ffffff;
+    --nord4: #d1e3e7;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: large;
+}
+
+header {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    align-items: center;
+    margin: 0 auto;
+    background-color: var(--nord1);
+    padding: 1%;
+    justify-content: space-between;
+    border-radius: 1em;
+    font-size: large;
+}
+
+header h3 {
+    font-size: 25px;
+}
+
+header img {
+    border-radius: 70%;
+    width: 30%;
+    height: 30%;
+}
+
+header p {
+    font-size: 18px;
+}
+
+
+
+nav {
+    margin: auto;
+    margin-top: 20px;
+    padding: 10px 30px;
+    text-decoration: none;
+    background-color: var(--nord0);
+    justify-content: space-between;
+    border-radius: 1em;
+
+}
+
+/* Modo Noche */
+
+#check_item {
+    position: relative;
+    width: 40px;
+    height: 20px;
+    background-color: #434343;
+    appearance: none;
+    outline: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+#check_item:checked {
+    background-color: rgb(76, 39, 161);
+}
+
+#check_item::before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-color: #f2f2f2;
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    transition: 0.7s ease;
+}
+
+#check_item:checked::before {
+    transform: translateX(20px);
+}
+
+.dark_mode {
+    background-color: #252525;
+    color: #434343;
+}
+
+/* Fin Modo Noche*/
+
+
+main {
+    display: flex;
+    background-color: var(--nord0);
+    margin: 0 auto;
+    justify-content: space-between;
+    border-radius: 1em;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 300px;
+    margin-right: auto;
+    
+
+}
+ul {
+    list-style-type: unset;
+}
+
+
+section {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+
+section h2 {
+    text-align: center;
+}
+
+article {
+    width: 70%;
+}
+
+article h2 {
+    text-align: center;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+/* footer */
+
+footer {
+
+    display: flex;
+    margin: auto;
+    padding: 1%;
+    background-color: var(--nord4);
+    justify-content: space-evenly;
+    border-radius: 1em;
+    flex-wrap: wrap;
+
+}
+
+footer 
+h4 {
+    text-align: center;
+}
+
+
+a:visited {
+    color: blue;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #252525;
+}
+
+
+#RedesSociales {
+
+    display: flex;
+    flex-direction: column;
+    margin-right: 60px;
+    height: 100%;
+    align-items: center;
+
+}
+
+.LogosRedes {
+
+    width: 40px;
+    height: 40px;
+}
+
+footer img {
+
+    margin-right: auto;
+    margin-left: auto;
+
+}
+
+
+/* full responsive */
+
+.contenedor {
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto;
+
+}
+
+.main {
+    width: 70%;
+    box-sizing: border-box;
+    padding: 1%;
+}
+
+@media screen and (max-width:800px) {
+    body {
+        background-color: lightblue;
+    }
+
+}
+
+@media screen and (max-width:450px) {
+    .contenedor {
+        width: 100%;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    aside {
+        align-items: center;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+}
